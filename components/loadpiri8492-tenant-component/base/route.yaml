@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadpiri8492-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadpiri8492-tenant-component
+    app.kubernetes.io/part-of: loadpiri8492-tenant-app
+  name: loadpiri8492-tenant-component
+  namespace: loadpiri8492-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadpiri8492-tenant-component
+    weight: null
+status: {}
